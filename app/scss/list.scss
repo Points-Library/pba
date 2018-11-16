@@ -1,0 +1,103 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+
+
+.main{
+    width: 1240px;
+    margin: 0 auto;
+    font-size: 14px; 
+    margin-bottom: 100px;
+    .header{
+        margin-bottom: .5em;
+        color: #969696;       
+    }
+    .main-container{
+       .list-row{
+           padding: 18px 0;
+           border-top: 1px solid #e2e2e2;
+           width: 1240;
+           height: 56px;
+           span{
+               a{
+                   float: left;
+                   color: #ff498c;
+               }
+           }
+           ul{
+               li{
+                   float: left;
+                   padding: 0 22px;
+                   cursor: pointer;
+                   border-left:1px solid #e2e2e2 ;
+                   &:nth-child(1){
+                       border: none;
+                   }
+                   a{
+                       color: #535353;
+                       &:hover{
+                           color: #ff498c;
+                       }
+                       &:active{
+                           color: #ff498c;
+                       }
+                   }
+               }
+           }
+       }
+      
+    }
+     .function-row{
+           background-color:#f8f8f8 ;
+           width: 1240px;
+           height: 47px;
+           padding: 14px 0;
+           li{
+               float: left;
+               padding: 0 22px;
+               cursor: pointer;
+               border-left:1px solid #e2e2e2 ;
+               &:nth-child(1){
+                       border: none;
+                   }
+                   a{
+                       color: #535353;
+                       &:hover{
+                           color: #ff498c;
+                       }
+                   }
+           }
+       }
+        .list-of-goods{
+           margin-top: 30px;
+           ul{
+               margin-right: -10px;
+               overflow: hidden;
+               li{
+                   float: left;
+                   width: 312px;
+                   padding-right: 10px;
+                   position: relative;
+                   overflow: hidden;
+                   img{
+                       width: 302px;
+                       height: 302px;
+                   }
+                   .goods-information{
+                       width: 302px;
+                       p{
+                           white-space:nowrap; 
+                           overflow: hidden;
+                           &:first-child{
+                               line-height: 21px;
+                           }
+                           &:nth-child(2){
+                               margin-top: 20px;
+                           }
+                       }
+                   }
+               }
+           }
+       }
+      
+}

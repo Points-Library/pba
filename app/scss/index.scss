@@ -1,0 +1,392 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+
+//选中按钮粉红色
+$bg:#F498FE;
+//商品列表大标题
+$h-color:#969696;
+//价格颜色
+$pri-color:#fe003f;
+#banner{
+    width: 1226px;
+    height: 396px;
+    margin: 0 auto;
+    position: relative;
+}
+//轮播图样式
+#banner #lunbo {
+    width: 1226px;
+    height: 396px;
+    margin: 50px auto;
+    overflow: hidden;
+    margin: 0 auto;
+    position: relative;
+}
+
+#banner #lunbo ul li {
+    height: 500px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 0;
+    display: none;
+}
+
+#banner #lunbo ul li.ac {
+    z-index: 5;
+}
+
+#banner #lunbo ol {
+    position: absolute;
+    left: 54%;
+    bottom: 10px;
+    z-index: 5;
+}
+
+#banner #lunbo ol li {
+    width: 12px;
+    height: 12px;
+    background: #fff;
+    margin-left: 5px;
+    float: left;
+    line-height: 20px;
+    text-align: center;
+    border-radius:100% ;
+    cursor: pointer;
+}
+
+#banner #lunbo ol li.ac {
+    background: red;
+    color: #fff;
+}
+
+#banner #lunbo>a {
+    text-decoration: none;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    width: 33px;
+    font-size: 40px;
+    vertical-align: middle;
+    color: #e2e6ea;
+    z-index: 5;
+    
+}
+#banner #lunbo>a>span{
+    width: 33px;
+    height: 56px;
+    font-size: 85px;
+    
+}
+
+#banner #lunbo #left{
+    left: 20%;
+}
+
+#banner #lunbo #right {
+    right: 3%;
+}
+
+#banner #lunbo ul li img {
+    width: 1226px;
+    height: 396px;
+}
+
+//轮播图上的列表样式
+#banner #list{
+    width: 210px;
+    height: 396px;
+    padding: 21px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    background-color: rgba(0,0,0,0.6);
+    #list-ul{
+        width: 210px;
+        height: 351px;
+        font-size: 14px;
+        &>li{
+            
+            height: 50px;
+            line-height: 50px;
+            &:hover{
+                background-color: $bg;
+               //鼠标移动到某个Li上，隐藏的ul显示
+                .chanpin{
+                    display: block
+                }
+            }
+            &>a{
+                position: relative;
+                display: inline-block;
+                padding-left: 32px;
+                color: white;
+                width: 210px;
+                z-index: 6;
+                &>span{
+                width: 14px;
+                position: absolute;
+                right: 18px;
+                color: white;
+            }
+            }
+            
+        }
+    }
+}
+
+//轮播图上隐藏的列表
+#banner #list #list-ul li .chanpin{
+        //定位隐藏的，relative是lunbo
+        position: absolute;      
+        width: 872px;
+        height: 396px;
+        z-index: 999;
+        top:0px;
+        left: 210px;
+        display: none;
+        ul{
+            float: left;
+              background-color: #f6f6f6;
+              width: 290px;
+              height: 396px;
+              border-right:1px solid #efefef;
+              li{
+                  width: 100%;
+                  height: 78px;
+                  &>a{
+                      //商品图片和信息
+                      &:first-child{
+                          padding-top:16px;
+                          padding-left: 36px;
+                          padding-bottom: 16px;
+                          height: 77px;
+                          width: 187px;
+                          float: left;
+                         
+                          //商品详情
+                          .txt{
+                              width: 101px;
+                              height: 22px;
+                              display: inline-block;
+                              font-size: 16px;
+                              text-align: center;
+                             vertical-align: middle;
+                              line-height: 22px;
+                              
+                             
+                          }
+                          img{
+                              float: left;
+                          }
+                      
+                      }
+                      //选购按钮
+                      &:nth-child(2){
+                          width: 72px;
+                          font-size: 14px;
+                          line-height: 24px;
+                          color: #f498fe;
+                          border-radius: 14px;
+                          border: 1px solid #f498fe;
+                          text-align: center;
+                          display: inline-block;
+                          margin: 25px 0;
+                          float: left;
+                          padding-left: 0;
+                          &:hover{
+                              background-color:$bg ;
+                              color: white;
+                          }
+                      }
+                  }
+              }
+        }
+}
+
+//轮播图下面那四个链接
+.banner-sub{
+    width: 1226px;
+    height: 141px;
+    margin: 0 auto;
+    margin-top: 26px;
+    a{
+        display: inline-block;
+        width: 301px;
+        height: 141px;
+        margin-right:5px;
+        float: left;
+        img{
+          float:left;
+            
+        }
+    }
+}
+
+//明星产品
+.star{
+    width: 1226px;
+    height: 561px;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    text-align: center;
+    //标题头部
+     .star-header{
+         width: 1226px;
+         height: 120px;
+         padding-bottom: 30px;
+         &>h1{
+             font-size: 34px;
+             line-height: 44px;
+             font-weight: 500;
+             color: $h-color;
+         }
+         &>img{
+             height: 10px;
+             padding-top: 5px;
+             width: 279px;
+             border: none;
+         }
+         &>p{
+             font-size: 15px;
+             line-height:30px;
+             color: #666;
+         }
+     }
+     //下面的商品详情
+     .star-product{
+         width: 1226px;
+         height: 441px;
+         &>ul{
+             width: 1226px;
+             height: 441px;
+             &>li{
+                 position: relative;
+                 float: left;
+                 margin-right: 4px;
+                 width: 242px;
+                 height: 351px;
+                 background: url("/images/star_goods_bg.png") center center no-repeat;
+                 &:last-child{
+                     margin-right: 0px;
+                 }
+                 &>a{
+                     .introduce{
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        text-align: center; 
+                        padding-bottom: 10px;
+                        .p-top{
+                            font-size: 16px;
+                            line-height: 16px;
+                            font-weight: 500;
+                        }
+                        .p-middle{
+                            font-size: 14px;
+                            line-height: 34px;
+                            color: #656565;
+                        }
+                        .p-bottom{
+                            font-size: 18px;
+                            line-height: 30px;
+                            color: $pri-color;
+                            font-weight: bold;
+                        }
+                     }
+                 }
+             }
+         }
+     }
+}
+//各个分类的商品列表
+.main-wrap{
+    width: 1226px;
+    height: 780px;
+    margin: 0 auto;
+    background-color:#F5F5F5 ;
+    //标题
+    .main-header{
+        margin-top: 25px;
+        padding-bottom: 15px;
+         h1{
+             font-size: 34px;
+             line-height: 44px;
+             font-weight: 500;
+             color: $h-color;
+         }
+         img{
+             border: none;
+         }
+         p{
+             font-size: 15px;
+             line-height: 30px;
+             color: #666;
+         }
+    }
+         //商品列表样式
+     .main-body{
+         width: 1226px;
+         height: 650px;
+         //左边大的图片
+         .big{
+             width: 253px;
+             float: left;
+         }
+         //右边商品列表
+         .small{
+             width:973px;
+             float: left;
+             &>ul{
+                 &>li{
+                     float: left;
+                     position: relative;
+                     background-color:white;
+                     width: 232px;
+                     height: 299px;
+                     text-align: center;
+                     margin-left: 10px;
+                     margin-bottom: 13px;
+//                     商品信息
+                     .goods-txt{
+                         position: absolute;
+                         width: 100%;
+                         padding-bottom: 10px;
+                         text-align: center;
+                         bottom: 0;
+                         left: 0;
+                         .goods-name{
+                             font-size:15px;
+                             line-height: 15px;
+                             font-weight: 500;   
+                         }
+                         .goods-pro{
+                             font-size: 13px;
+                             line-height: 27px;
+                             color: #656565;
+                         }
+                         .goods-price{
+                             font-size: 17px;
+                             line-height: 27px;
+                             font-weight: bold;
+                             color: $pri-color;                 
+                         }
+                     } 
+                     
+                 }
+                  &>img{
+                        width: 100%;
+                     }
+                 
+             }
+            
+         }
+     }
+}

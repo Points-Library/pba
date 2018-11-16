@@ -1,0 +1,27 @@
+$acolor:#969696;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color:$acolor ;
+}
+a:hover{
+    text-decoration:none;
+    color:#E60041;
+}
+ol,ul,li{
+    list-style:none;
+    }
+em,i{
+    font-style:normal;
+    }
+img{
+    border:none;
+    }
+input{
+    outline: none;
+}

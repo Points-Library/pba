@@ -1,0 +1,52 @@
+*{
+ margin: 0;
+ padding: 0;   
+}
+a{
+    text-decoration: none;
+}
+.register-body{
+    width: 335px;
+    height: 400px;
+    margin: 80px auto;
+    text-align: center;
+    .logo{
+        text-align: center;
+    }
+    h1{
+        padding-top: 25px;
+        font-weight: 500;
+        font-size: 27px;
+        margin-bottom: 13px;
+        text-align: center;
+    }
+    .zc{
+        width: 333px;
+        height: 38px;
+        border: none;
+        border: 1px solid #efefef;
+        margin-top: 13px;
+        
+    }
+    .rebtn{
+        width: 335px;
+        height: 49px;
+        background: #ff498c;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        border: none;
+        margin-top: 13px;
+    }
+    p{
+        text-align: left;
+        margin-top: 22px;
+        color: #a9a9a9;
+        letter-spacing: 0.5px;
+        font-size: 14px;
+        &>a{
+           color: #000; 
+        }
+    }
+    
+}

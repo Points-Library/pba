@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>PBA详情页</title>
+		<link rel="stylesheet" href="/css/detail.css" />
+	</head>
+	<body>
+		<!--遮蔽框-->
+		<div class="zhebi" style="position: fixed; opacity: 0.7;width: 100%;height: 100%;background: white;display: none;">
+			
+		</div>
+		<header></header>
+		<div class="ok-add">
+					<span>商品已加入购物车</span>
+					<a href="javascript:;" class="go-on">继续逛逛</a>
+					<a href="/html/shopping_car.html">去购物车结算</a>
+		</div>	
+	    <!--商品购买界面-->
+		<div class="detail-wrap" id="detail-wrap"></div>
+		<script type="text/html" id="detail-template">
+			         <!--商品图片-->
+			    <div class="detail-img">
+					<img src="{{detail.img}}" />
+				</div> 
+				
+				<!--商品信息-->
+			<div class="detail-txt" id="detail-txt">
+				<!--商品名字-->
+				<div class="name">
+					<h1 class="pro_title">{{  detail.name  }}</h1>
+					<p>{{  detail.txt }}</p>
+				</div>
+				<!--商品价格-->
+				<div class="price">
+					<span class="pro_price">￥{{  detail.price  }}</span>
+					(不支持积分抵扣)
+				</div>
+				<!--商品数量-->
+				<div class="num-change">
+					<p>数量:&nbsp;&nbsp;&nbsp;&nbsp;</p>
+					<div class="choose">
+						<span class="sub">-</span>
+						<input type="text" value="1" class="in-num">
+						<span class="add">+</span>
+					</div>
+				</div>
+				<!--商品支付-->
+				<div class="pay">
+					
+					<a href="javascript:;" id="add-btn">加入购物车</a>
+					<a href="javascript:;">咨询</a>
+					
+					
+				</div>
+				<!--注意事项-->
+				<div class="notice">
+					
+                                                   服务承诺：31天无理由退换货，按时发货，全场满99元包邮
+            
+				</div>
+			</div>
+		</script>
+			
+		
+		
+		<!--商品图片详情和热门商品-->
+		<div class="pro-wrap">
+			<!--热门商品-->
+			<div class="pro-hot">
+				<!--标题-->
+				<div class="hot-header">热门商品</div>
+				<ul id="hot-ul"></ul>
+				<script type="text/html" id="hot-template">
+					{{each hot item i}}
+					<li>
+						<a href="/html/detail.html">
+							<img src="{{ item.img }}" style="height: 90px; width: 90px;"/>
+						</a>
+						<span>
+							<a href="/html/detail.html">
+								{{item.title}}
+							</a>
+							<span>￥{{item.price}}</span>
+						</span>
+					</li>
+					{{/each}}
+				</script>
+					
+			</div>
+			<div class="pro-details">
+				<div class="h-details">
+					<a href="#">商品详情</a>
+				</div>
+				<div class="bg-details">
+					<img src="/images/7ea6ad4e5ff2dd5b7f06e9cc625e712d.jpg" />
+					<img src="/images/e3fce95cc74d7c6093ec8a8a2c11a8a7.jpg"/>
+					<img src="/images/4272069010f6e0dcef577b3a37b8650c.jpg"/>
+					<img src="/images/e38e9aeafb29c0b5a567dfa4f8bb8d52.jpg"/>
+					<img src="/images/e7f670c57b6477282defa12da862cd68.jpg"/>
+					<img src="/images/a9235627195a2467c3345068218f37d6.jpg"/>
+					<img src="/images/43a2ce9be03069f14c8fad7cb9170f97.jpg"/>
+					<img src="/images/de468501582b2ea7c0d501667a598fab.jpg"/>
+				</div>
+			</div>
+		</div>
+			
+			
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main = "/js/detail.js"></script>
+</html>

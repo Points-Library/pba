@@ -1,0 +1,331 @@
+@import "component/reset.scss";
+@import "component/header.scss";
+@import "component/footer.scss";
+
+.cart{
+    padding-top: 10px;
+    padding-bottom: 12px;
+    width: 1190px;
+    margin: 0 auto;
+    font-family: "Microsoft Yahei", simsun, sans-serif;
+    font-size: 12px;
+    position: relative;
+    .cart-header{
+        
+        height: 25px;
+        position: relative;
+        border-bottom: 1px solid #00a4ed;
+        &>h3{
+            float: left;
+            width: 80px;
+            line-height: 25px;
+            border-top-right-radius: 6px;
+            background: #00A4ED;
+            color: white;
+            text-align: center;
+            font-weight:400 ;
+            font-size: 16px;
+        }
+        .steps{
+            float: left;
+            width: 444px;
+            position: absolute;
+            left: 385px;
+            top: -21px;
+            div{
+                position: relative;
+                float: left;
+                width: 141px;
+                padding-top: 21px;
+                &>span{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    height: 21px;
+                    width: 100%;
+                    background: url("/images/icon-steps_2951b6aa03.png") 0 0 no-repeat;
+                }
+                &>b{
+                   position: absolute;
+                   top: 0;
+                   width: 20px;
+                   height: 21px;
+                   line-height: 21px;
+                   font-weight: 700;
+                   font-size: 14px;
+                   text-align: center;
+                   color: white; 
+                }
+                &>i{
+                    font-style: normal;
+                    text-align: left;
+                    display: block;
+                    margin-top: 5px;
+                }
+                 &:nth-child(2){
+                    &>span{
+                        background-position:0 -21px ;
+                    }
+                    &>b{
+                        left: 60px;
+                    }
+                    &>i{
+                        text-align: center;
+                    }
+                }
+                &:nth-child(3){
+                    &>span{
+                        background-position:0 -21px ;
+                    }
+                    &>b{
+                        left: 60px;
+                    }
+                    &>i{
+                        text-align: center;
+                    }
+                }
+                
+            }
+            .steps-first{
+                width: 81px;
+            }
+            .steps-last{
+                width: 81px;
+                &>span{
+                     background-position:0 -63px ;
+                } 
+                 &>i{
+                        text-align: right;
+                    }  
+            }
+          
+        }
+        
+    }
+    //购物车里面的头部属性
+        .cart-thead{
+            line-height: 40px;
+            background: white;
+            height: 40px;
+            div{
+                float: left;
+                text-align: center;
+            }
+            .cell-checked{
+                width: 150px;
+                padding-left: 26px;
+                text-align: left;
+                &>input{
+                    position: relative;
+                    width: 14px;
+                    height: 14px;
+                    top: 2px;
+                }
+            }
+            .cell-product{
+                width:503px;
+                padding-right: 95px;
+            }
+//          .cell-weight{
+//              width: 179px;
+//              
+//          }
+            .cell-price{
+                width: 88px;
+               
+            }
+            .cell-num{
+                width: 178px;
+               
+            }
+            .cell-count{
+                width: 134px;
+            }
+            .cell-operation{
+                width: 110px;
+            }
+            
+        }
+    .cart-body{
+        margin-top: 20px;
+        background: white;
+        .product-tr{
+            margin: 0 26px;      
+            border-bottom: 1px solid #ddd;
+            .product-info{
+                position: relative;
+                padding-left: 29px;
+                height: 141px;
+                .tr-check{
+                    position: absolute;
+                    top: 48px;
+                    left: 0;
+                    width: 14px;
+                    height: 14px;
+                   &>input{
+                      width: 14px;
+                      height: 14px;
+                      
+                   }
+                }
+                &>div{
+                    float:left;
+                    &:nth-child(2){
+                        width: 599px;
+                        padding-top: 15px;
+                        padding-right: 78px;
+                        padding-bottom: 15px;
+                        text-align: left;
+                        &>a{
+                            &:nth-child(1){
+                                float: left;
+                                margin-right: 160px;
+                                border: 1px solid #e6e6e6;
+                                img{
+                                    display: block
+                                }
+                            }
+                            &:nth-child(2){
+                               display: block;
+                                height: 40px;
+                                overflow: hidden;
+                                line-height: 20px;
+                                color: #333;
+                            }
+                            
+                        }
+                    }
+                }
+//              .tr-weight{
+//                  width: 179px;
+//                  padding-top: 28px;
+//                  text-align: center;
+//              }
+                .tr-price{
+                    width: 88px;
+                    padding-top:28px;
+                    text-align: center;
+                }
+                .tr-num{
+                    padding-top:26px ;
+                    width: 178px;
+                    
+                    .control{
+                        position: relative;
+                        margin: 0 auto;
+                        width: 90px;
+                        height: 26px;
+                        .sub{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            border: none;
+                            width: 26px;
+                            height: 26px;
+                            background: url("/images/icon-ctrl_00b4159d56.png") 0 0 no-repeat;
+                        }
+                        .add{
+                            position: absolute;
+                            left: 64px;
+                            top: 0;
+                            border: none;
+                            width: 26px;
+                            height: 26px;
+                            background: url("/images/icon-ctrl_00b4159d56.png") -26px 0 no-repeat;
+                            
+                        }
+                        &>input{
+                            position: absolute;
+                            top: 0;
+                            left: 26px;
+                            width: 38px;
+                            height: 26px;
+                            padding: 0;
+                            border: none;
+                            border-top: 1px solid #ccc;
+                            border-bottom: 1px solid #ccc;
+                            font-weight: 700;
+                            font-size: 14px;
+                            color: #333;
+                            text-align: center;
+                        }
+                    }
+                }
+                .tr-count{
+                    width: 134px;
+                    font-weight: 700;
+                    text-align: center;
+                    padding-top:28px ;
+                }
+                .tr-operation{
+                    width: 110px;
+                    padding-top: 28px;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    .cart-footer{
+        width: 1190px;
+        height: 72px;
+        margin-top:20px ;
+        margin-bottom: 8px;
+        padding: 12px 26px;
+        color: #333;
+        .cart-total{
+            float: right;
+            .submit-all{
+                width: 120px;
+                height: 48px;
+                border: 1px solid #f44;
+                border-radius: 3px;
+                background: #f44;
+                font-size: 16px;
+                color: #fff;
+                text-align: center;
+                cursor: pointer; 
+            }
+           
+        }   
+        .info-wrap{
+            float: right;
+            .total{
+                margin-top: 10px;
+                &>span{
+                &:first-child{
+                    margin: 0 3px;
+                    font-family: Arial, sans-serif;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: #f44;
+                }
+                &:nth-child(2){
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: #f44;
+                        margin-right: 10px;
+                }
+             }
+            }
+            
+        }    
+    }
+    .no-pro{
+        width: 1190px;
+        height: 302px;
+        background: url("/images/icon-cart_8a3fe0b31a.png") 405px center no-repeat;
+        top: 0;
+        left: 0;
+        text-align: center;
+        strong{
+            font-weight: 700;
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            line-height: 302px;
+        }
+        &>a{
+            color: #09c;
+        }
+    }
+}

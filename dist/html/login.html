@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>pba登录</title>
+		<link rel="stylesheet" href="/css/login.css" />
+	</head>
+	<body>
+		<div class="login-body">
+			<!--登录的Logo-->
+			<div class="logo">
+				<a href="javascript:;">
+					<img src="/images/logo (1).png"/>
+				</a>
+			</div>
+			<!--登录表单-->
+			<form>
+				<!--登录的Input框-->
+				<div class="input-wrap">
+					<input type="text" id="mobile" class="zh" placeholder="手机号码"/>
+					<input type="password"id="password" class="zh" placeholder="密码"/>					
+					<input type="submit" class="btn" id="btn" value="立即登录" />
+				</div>
+			</form>
+			<div class="remeber">
+				<input type="checkbox" id="check" />
+				<span>记住密码</span>
+				<a href="javascript:;">忘记密码?</a>
+				<a href="javascript:;">&nbsp;|&nbsp;</a>
+				<a href="http://localhost:2333/html/register.html">注册账号</a>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/login.js"></script>
+</html>

@@ -1,0 +1,172 @@
+
+header{
+    width: 1263px;
+    height: 194px;   
+
+}
+
+header .header{
+    width: 1263px;
+    height: 194px;
+}
+header .header .container{
+    width: 1226px;
+    height: 194px;
+    margin: 0 auto;
+    .header-wrap{
+        width: 1200px;
+        height: 194px;
+        margin: 0 auto;
+        padding-top:82px;
+        padding-bottom:37px;
+        .header-logo{
+            float: left;
+            width: 194px;
+            height: 71px;
+            img{
+                width:194px;
+                height: 71px;
+            }
+        }
+        .nav{
+            float: left;
+            width: 736px;
+            height: 45px;
+            padding-top:18px;
+            padding-left:28px;
+            ul{
+                position: relative;
+                width: 708px;
+                height: 27px;
+                border-bottom: 1px solid #E9E9E9;
+                padding-right: 28px;
+                li{
+                    
+                    float: left;
+                    padding: 0 12px;
+                    &:nth-child(2){
+                        padding-left: 0;
+                    }
+                    &:last-child{
+                        padding-right: 0;
+                    }
+                    
+                }
+                #shouye{
+                       
+                        display: none;
+                    }
+            }
+
+        }
+    }
+
+}
+
+header .header .container .search{
+    width: 268px;
+    height: 48px;
+    float: left;
+    input{
+        width: 220px;
+        height: 48px;
+        border: none;
+        border: 1px solid #EAEAEA;
+        border-right: none;
+        float: left;
+    }
+    .search-btn{
+        width: 47px;
+        height: 48px;
+        float: left;
+        border: 1px solid #eaeaea;
+        img{
+            
+            margin-top: 13px;
+            margin-left: 13px;
+        }
+    }
+    
+}
+//顶部固定定位的那个黑色列表
+header .menu-wrap{
+    position: fixed;
+    width: 1263px;
+    height: 32px;
+    background-color:#363636;
+    z-index: 10;
+    .container{
+        width: 1226px;
+        height: 32px;
+        margin: 0 auto;
+        .menu-list{
+            width: 1226px;
+            height: 32px;
+            //登陆后显示手机号的div
+            #login-name{
+                width: 200px;
+                height: 32px;
+                position: absolute;
+                top: 0;
+                background: #363636;
+                right: 427px;
+                text-align: center;
+                height: 32px;
+                line-height: 32px;
+                color: white;
+                font-size: 12px;
+               display: none;
+            }
+            li{
+                float: right;
+                height: 32px;
+                line-height: 32px;
+                font-size: 12px;
+                padding:0 12px;
+                color: white;
+                &:last-child{
+                    padding-left: 0;
+                    
+                }
+                &:first-child{
+                    background-color:#424242 ;
+                    &>span{
+                        color: red;
+                    }
+                }
+                &:nth-child(4){
+                    position: relative;
+                    //我的PBA列表
+                    .pba-list{
+                        width: 83px;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        margin-top: 32px;
+                        text-align: center; 
+                        display: none;                      
+                        li{
+                            width: 83px;                          
+                            background-color:#424242; 
+                            &:last-child{
+                                padding-left: 12px;
+                            }
+                            &:hover{
+                                background:#545454;
+                            }
+                            a{
+                                display: block;
+
+                            }
+                        }
+                    }
+                }
+
+                a{
+                    color: white;
+                }
+            }
+        }
+    }
+}
+

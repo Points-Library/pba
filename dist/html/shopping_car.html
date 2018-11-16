@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="/css/shopping_car.css" />
+	</head>
+	<body>
+		<header></header>
+		<div class="cart">
+			<!--购物车头部-->
+			<div class="cart-header">
+				<h3>购物车</h3>
+				<!--购买流程-->
+				<div class="steps">
+					<div class="steps-first">
+						<span></span>
+						<b>1</b>
+						<i>购物车</i>
+					</div>
+					<div>
+						<span></span>
+						<b>2</b>
+						<i>确认订单</i>
+					</div>
+					<div>
+						<span></span>
+						<b>3</b>
+						<i>支付</i>
+					</div>
+					<div class="steps-last">
+						<span></span>						
+						<i>完成</i>
+					</div>
+				</div>
+			</div>
+			<!--购物车的属性名-->
+			<div class="cart-thead">
+				<div class="cell-checked">
+					<input type="checkbox" class="all-check" />全选
+				</div>
+				<div class="cell-product">商品</div>
+				<!--<div class="cell-weight">重量</div>-->
+				<div class="cell-price">单价(元)</div>
+				<div class="cell-num">数量</div>
+				<div class="cell-count">小计</div>
+				<div class="cell-operation">操作</div>
+			</div>
+			<!--购物车内容-->
+			<div class="cart-body">
+				<div class="product-tr" id="product-tr"></div>
+				<script type="text/html" id="cart-template">
+				  {{each product item i}}
+					<div class="product-info">
+						<div class="tr-check">
+							<input type="checkbox" class="single-check"/>
+						</div>						
+						<div class="tr-product">
+							<a href="javascript:;">
+								<img src="{{item.img}}" style="width: 78px;height: 78px;"/>
+							</a>
+							<a href="javascript:;">
+								{{item.title}}
+							</a>
+						</div>
+						<!--<div class="tr-weight">100g</div>-->
+						<div class="tr-price">
+							<span>￥{{item.price}}</span>
+						</div>
+						<div class="tr-num">
+							<div class="control">
+								<button class="sub"></button>
+								<input type="text" value="{{item.num}}"class="cart-input" />
+								<button class="add"></button>
+							</div>
+						</div>
+						<div class="tr-count">￥{{item.num*item.price}}</div>
+						<div class="tr-operation">
+							<a href="javascript:;" class="delete-btn">删除</a>
+						</div>
+					</div>
+					<span style="display: none;" class="pro-id">{{item.id}}</span>
+					{{/each}}
+				</script>
+			</div>
+					    <!--购物车没有东西时的页面-->
+		    <div class="no-pro" id="no-pro" style="display: none;">
+		    	<strong>购物车空空如也</strong>
+		    	赶紧去
+		    	<a href="http://localhost:2333/">逛逛吧</a>
+		    </div>
+		    <!--购物车结算-->
+		    <div class="cart-footer">
+		    	<div class="cart-total">
+		    		<button class="submit-all" type="submit">
+		    			去结算
+		    		</button>
+		    	</div>
+		    	<div class="info-wrap">
+		    		<p class="total">
+		    			已选商品
+		    			<span class="pro_sum">0</span>
+		    			件    &nbsp; &nbsp; &nbsp;合计:
+		    			<span class="amount">￥0</span>
+		    		</p>
+		    	</div>
+		    </div>
+		
+		</div>
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/shopping_car.js"></script>
+</html>

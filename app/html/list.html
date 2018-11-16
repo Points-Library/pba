@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>商城</title>
+		<link rel="stylesheet" href="/css/list.css" />
+	</head>
+	<body>
+		<header></header>
+		<div class="main">
+			<div class="header">
+				<a href="http://localhost:2333/">首页/</a>
+				<a href="http://localhost:2333/html/list.html">所有商品/</a>
+				<a href="http://localhost:2333/html/list.html">pba</a>
+			</div>
+			<div class="main-container">		
+				<div class="list-row">
+					<span><a href="http://localhost:2333/html/list.html">护肤 :</a></span>
+					<ul>
+						<li><a href="http://localhost:2333/html/list.html">洁面</a></li>
+						<li><a href="http://localhost:2333/html/list.html">爽肤水</a></li>
+						<li><a href="http://localhost:2333/html/list.html">乳液</a></li>
+						<li><a href="http://localhost:2333/html/list.html">面霜</a></li>
+						<li><a href="http://localhost:2333/html/list.html">手工皂</a></li>
+					</ul>
+				</div>
+				<div class="list-row">
+					<span><a href="http://localhost:2333/html/list.html">彩妆 :</a></span>
+					<ul>
+						<li><a href="http://localhost:2333/html/list.html">BB霜</a></li>
+						<li><a href="http://localhost:2333/html/list.html">底妆</a></li>
+						<li><a href="http://localhost:2333/html/list.html">眼妆</a></li>
+						<li><a href="http://localhost:2333/html/list.html">唇妆美甲</a></li>
+						<li><a href="http://localhost:2333/html/list.html">卸妆</a></li>
+						<li><a href="http://localhost:2333/html/list.html">工具</a></li>
+					</ul>
+				</div>
+				<div class="list-row">
+					<span><a href="http://localhost:2333/html/list.html">面膜 :</a></span>
+					<ul>
+						<li><a href="http://localhost:2333/html/list.html">面膜贴</a></li>
+						<li><a href="http://localhost:2333/html/list.html">果酱面膜</a></li>
+					</ul>
+				</div>
+				<div class="list-row">
+					<span><a href="http://localhost:2333/html/list.html">功效 :</a></span>
+					<ul>
+						<li><a href="http://localhost:2333/html/list.html">遮瑕</a></li>
+						<li><a href="http://localhost:2333/html/list.html">隔离</a></li>
+						<li><a href="http://localhost:2333/html/list.html">保湿</a></li>
+						<li><a href="http://localhost:2333/html/list.html">控油</a></li>
+						<li><a href="http://localhost:2333/html/list.html">美白</a></li>
+						<li><a href="http://localhost:2333/html/list.html">补水</a></li>
+						<li><a href="http://localhost:2333/html/list.html">祛痘</a></li>
+						<li><a href="http://localhost:2333/html/list.html">淡斑</a></li>
+						<li><a href="http://localhost:2333/html/list.html">排毒</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="function-row">
+					<ul>
+						<li><a href="javascript:;">推荐</a></li>
+						<li><a href="javascript:;">价格从高到低</a></li>
+						<li><a href="javascript:;">价格从低到高</a></li>
+						<li><a href="javascript:;">按最新</a></li>
+					</ul>
+			</div>
+			<div class="list-of-goods">
+		    	<ul id="l-u"></ul>
+		    	<script type="text/html" id="list-template">
+		    		{{each list item i}}
+		    		   <li>
+		    			<a href="http://localhost:2333/html/detail.html?id={{item.id}}">
+		    				<img src="{{item.img}}"/>
+		    			</a>
+		    			<div class="goods-information">
+		    				<p class="goods-name"><a href="http://localhost:2333/html/detail.html?id={{item.id}}">{{item.name}}</a></p>
+		    				<p class="goods-price"><a href="http://localhost:2333/html/detail.html?id={{item.id}}">￥{{item.price}}</a></p>
+		    			</div>
+		    			</li>
+		    		{{/each}}
+		    	</script>
+ 			 </div>
+	    </div>
+		    
+		    
+		<footer></footer>
+	</body>
+	<script type="text/javascript" src="/libs/require/require.js" data-main="/js/list.js"></script>
+</html>
